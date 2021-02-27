@@ -616,8 +616,8 @@
 
                 <nav class="page-breadcrumb">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="#">Forms</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Basic Elements</li>
+                        <li class="breadcrumb-item"><a href="#">Tableau de bord</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Enregistrement de l'utilisateur</li>
                     </ol>
                 </nav>
 
@@ -629,46 +629,45 @@
                                 <h6 class="card-title">Enregistrement d'un utilisateur</h6>
                                 <form>
                                     <div class="form-group">
-                                        <label for="exampleInputText1">Text Input</label>
+                                        <label for="exampleInputText1">Nom complet</label>
                                         <input type="text" class="form-control" id="exampleInputText1" value="Amiah Burton" placeholder="Enter Name">
                                     </div>
                                     <div class="form-group">
-                                        <label for="exampleInputEmail3">Email Input</label>
-                                        <input type="email" class="form-control" id="exampleInputEmail3" value="amiahburton@gmail.com" placeholder="Enter Email">
+                                        <label for="email">Email</label>
+                                        <input type="email" class="form-control" id="email" value="amiahburton@gmail.com" placeholder="Enter Email">
                                     </div>
                                     <div class="form-group">
-                                        <label for="exampleInputNumber1">Number Input</label>
-                                        <input type="number" class="form-control" id="exampleInputNumber1" value="6473786">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="exampleInputPlaceholder">Placeholder</label>
-                                        <input type="text" class="form-control" id="exampleInputPlaceholder" placeholder="Enter Your Name">
+                                        <label for="fonction">fonction</label>
+                                        <select class="form-control" id="fonction">
+											<option selected disabled>Selectionner la fonction</option>
+											<option>12-18</option>
+										</select>
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="dpt">Select Input</label>
+                                        <label for="dpt">Direction departement action social</label>
                                         <select class="form-control" id="dpt">
-											<option selected disabled>Select your age</option>
+											<option selected disabled>Selectionner le departement</option>
 											<option>12-18</option>
 										</select>
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="circonscruption">Select Input</label>
+                                        <label for="circonscruption">Circonscription action social</label>
                                         <select class="form-control" id="circonscruption">
-											<option selected disabled>Select your age</option>
+											<option selected disabled>Selectionner la circonscription</option>
 											<option>12-18</option>
 										</select>
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="exampleFormControlSelect1">Select Input</label>
-                                        <select class="form-control" id="exampleFormControlSelect1">
-											<option selected disabled>Select your age</option>
+                                        <label for="Organigramme">Organigramme</label>
+                                        <select class="form-control" id="Organigramme">
+											<option selected disabled>Selectionner l'organigramme</option>
 											<option>12-18</option>
 										</select>
                                     </div>
-                                    <button class="btn btn-primary" type="submit">Submit form</button>
+                                    <button class="btn btn-success shadow-sm" type="submit"><i class="btn-icon-prepend mr-2" data-feather="check-circle"></i> Ajouter un utilisateur</button>
                                 </form>
                             </div>
                         </div>

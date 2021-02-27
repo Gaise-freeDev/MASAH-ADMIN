@@ -542,7 +542,7 @@
                 <nav class="page-breadcrumb">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="#">Tableau de bord</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Liste des utilisateurs</li>
+                        <li class="breadcrumb-item active" aria-current="page">Liste des circonscriptions</li>
                     </ol>
                 </nav>
 
@@ -550,14 +550,17 @@
                     <div class="col-md-12 grid-margin stretch-card">
                         <div class="card">
                             <div class="card-body">
-                                <h6 class="card-title">Liste des utilisateurs</h6>
+                                <h6 class="card-title">Liste des circonscriptions</h6>
                                 <div class="table-responsive">
                                     <table id="dataTableExample" class="table">
                                         <thead>
                                             <tr>
-                                                <th>Nom</th>
-                                                <th>Email</th>
+                                                <th>Non du contact</th>
+                                                <th>prenom</th>
                                                 <th>Fonction</th>
+                                                <th>Telephone</th>
+                                                <th>ville</th>
+                                                <th>Quartier</th>
                                                 <th>Action</th>
                                             </tr>
                                         </thead>
@@ -566,8 +569,11 @@
                                                 <td>Tiger Nixon</td>
                                                 <td>System Architect</td>
                                                 <td>Edinburgh</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
                                                 <td>
-                                                    <a href="add-user.html" class="btn btn-sm btn-success shadow-sm"><i class="btn-icon-prepend" data-feather="edit"></i></a>
+                                                    <a href="add-circonsciption.html" class="btn btn-sm btn-success shadow-sm"><i class="btn-icon-prepend" data-feather="edit"></i></a>
                                                     <a href="" class="btn btn-sm btn-info shadow-sm" data-toggle="modal" data-target=".bd-example-modal-xl"><i class="btn-icon-prepend" data-feather="clipboard"></i></a>
                                                     <a href="#" class="btn btn-sm btn-danger shadow-sm" type="button" data-toggle="modal" data-target=".delete-user"><i class="btn-icon-prepend" data-feather="trash"></i></a>
                                                 </td>
@@ -588,13 +594,13 @@
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title text-center" id="exampleModalLabel">Suppression de l'utilisateur</h5>
+                            <h5 class="modal-title text-center" id="exampleModalLabel">Suppression de la circonscription</h5>
                         </div>
                         <div class="modal-body container">
                             <div class="row">
-                                <div class="col-sm-7 mx-auto">
+                                <div class="col-sm-8 mx-auto">
                                     <p>
-                                        voulez-vous supprimer ce utilisateur ?
+                                        voulez-vous supprimer cette circonscription ?
                                     </p>
                                 </div>
                             </div>
@@ -622,21 +628,57 @@
                                         <div class="card">
                                             <div class="card-body">
                                                 <div class="d-flex justify-content-between align-items-baseline mb-2">
-                                                    <h6 class="card-title mb-0">Information de la <span class="badge bg-dark text-white" style="font-weight: 900;">"fonction"</span></h6>
+                                                    <h6 class="card-title mb-0">Information de la <span class="badge bg-dark text-white" style="font-weight: 900;">"circonscription"</span></h6>
                                                 </div>
                                                 <div class="table-responsive">
                                                     <table class="table table-hover mb-0">
                                                         <tbody class="container">
                                                             <tr class="row">
-                                                                <td class="col-sm-4">Email : </td>
+                                                                <td class="col-sm-4">Nom de contact : </td>
                                                                 <td class="col-sm-8">01/01/2020</td>
                                                             </tr>
                                                             <tr class="row">
-                                                                <td class="col-sm-4">Fonction : </td>
+                                                                <td class="col-sm-4">Prenom : </td>
                                                                 <td class="col-sm-8">01/01/2020</td>
                                                             </tr>
                                                             <tr class="row">
-                                                                <td class="col-sm-4">Direction departemental action social</td>
+                                                                <td class="col-sm-4">Telephone</td>
+                                                                <td class="col-sm-8">01/05/2020</td>
+                                                            </tr>
+                                                            <tr class="row">
+                                                                <td class="col-sm-4">Libelle</td>
+                                                                <td class="col-sm-8">01/05/2020</td>
+                                                            </tr>
+                                                            <tr class="row">
+                                                                <td class="col-sm-4">Nom de la rue</td>
+                                                                <td class="col-sm-8">01/05/2020</td>
+                                                            </tr>
+                                                            <tr class="row">
+                                                                <td class="col-sm-4">Numero de la parcelle</td>
+                                                                <td class="col-sm-8">01/05/2020</td>
+                                                            </tr>
+                                                            <tr class="row">
+                                                                <td class="col-sm-4">Fonction</td>
+                                                                <td class="col-sm-8">01/05/2020</td>
+                                                            </tr>
+                                                            <tr class="row">
+                                                                <td class="col-sm-4">ville</td>
+                                                                <td class="col-sm-8">01/05/2020</td>
+                                                            </tr>
+                                                            <tr class="row">
+                                                                <td class="col-sm-4">Quartier</td>
+                                                                <td class="col-sm-8">01/05/2020</td>
+                                                            </tr>
+                                                            <tr class="row">
+                                                                <td class="col-sm-4">Direction de departement d'action social</td>
+                                                                <td class="col-sm-8">01/05/2020</td>
+                                                            </tr>
+                                                            <tr class="row">
+                                                                <td class="col-sm-4">Circonscription d'action social</td>
+                                                                <td class="col-sm-8">01/05/2020</td>
+                                                            </tr>
+                                                            <tr class="row">
+                                                                <td class="col-sm-4">Complement</td>
                                                                 <td class="col-sm-8">01/05/2020</td>
                                                             </tr>
                                                         </tbody>

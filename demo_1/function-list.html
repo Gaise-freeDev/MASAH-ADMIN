@@ -555,20 +555,20 @@
                                     <table id="dataTableExample" class="table">
                                         <thead>
                                             <tr>
-                                                <th>Nom</th>
-                                                <th>Email</th>
-                                                <th>Fonction</th>
+                                                <th>Libelle</th>
+                                                <th class="w-70">Description</th>
+                                                <th>Superviseur</th>
                                                 <th>Action</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
                                                 <td>Tiger Nixon</td>
-                                                <td>System Architect</td>
-                                                <td>Edinburgh</td>
-                                                <td>
-                                                    <a href="add-user.html" class="btn btn-sm btn-success shadow-sm"><i class="btn-icon-prepend" data-feather="edit"></i></a>
-                                                    <a href="" class="btn btn-sm btn-info shadow-sm" data-toggle="modal" data-target=".bd-example-modal-xl"><i class="btn-icon-prepend" data-feather="clipboard"></i></a>
+                                                <td>System Architect...</td>
+                                                <td></td>
+                                                <td class="w-20">
+                                                    <a href="add-function.html" class="btn btn-sm btn-success shadow-sm"><i class="btn-icon-prepend" data-feather="edit"></i></a>
+                                                    <a href="" class="btn btn-sm btn-info shadow-sm" data-toggle="modal" data-target=".function-modal"><i class="btn-icon-prepend" data-feather="clipboard"></i></a>
                                                     <a href="#" class="btn btn-sm btn-danger shadow-sm" type="button" data-toggle="modal" data-target=".delete-user"><i class="btn-icon-prepend" data-feather="trash"></i></a>
                                                 </td>
                                             </tr>
@@ -594,7 +594,7 @@
                             <div class="row">
                                 <div class="col-sm-7 mx-auto">
                                     <p>
-                                        voulez-vous supprimer ce utilisateur ?
+                                        voulez-vous supprimer cette fonction ?
                                     </p>
                                 </div>
                             </div>
@@ -609,11 +609,11 @@
                 </div>
             </div>
             <!-- end deleting -->
-            <div class="modal fade bd-example-modal-xl" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+            <div class="modal fade function-modal" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
                 <div class="modal-dialog modal-xl">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h3 class="modal-title">Information de la fonction</h3>
+                            <h3 class="modal-title">Information de l'utilisateur</h3>
                         </div>
                         <div class="modal-body">
                             <div class="container">
@@ -622,21 +622,21 @@
                                         <div class="card">
                                             <div class="card-body">
                                                 <div class="d-flex justify-content-between align-items-baseline mb-2">
-                                                    <h6 class="card-title mb-0">Information de la <span class="badge bg-dark text-white" style="font-weight: 900;">"fonction"</span></h6>
+                                                    <h6 class="card-title mb-0">Information de la <span class="badge bg-dark text-white p-2" style="font-weight: 900;">"Fonction"</span></h6>
                                                 </div>
                                                 <div class="table-responsive">
                                                     <table class="table table-hover mb-0">
                                                         <tbody class="container">
                                                             <tr class="row">
-                                                                <td class="col-sm-4">Email : </td>
+                                                                <td class="col-sm-4">Libelle : </td>
                                                                 <td class="col-sm-8">01/01/2020</td>
                                                             </tr>
                                                             <tr class="row">
-                                                                <td class="col-sm-4">Fonction : </td>
+                                                                <td class="col-sm-4">Description : </td>
                                                                 <td class="col-sm-8">01/01/2020</td>
                                                             </tr>
                                                             <tr class="row">
-                                                                <td class="col-sm-4">Direction departemental action social</td>
+                                                                <td class="col-sm-4">Superviseur</td>
                                                                 <td class="col-sm-8">01/05/2020</td>
                                                             </tr>
                                                         </tbody>

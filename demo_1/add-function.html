@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="../../../assets/vendors/core/core.css">
     <!-- endinject -->
     <!-- plugin css for this page -->
-    <link rel="stylesheet" href="../../../assets/vendors/datatables.net-bs4/dataTables.bootstrap4.css">
     <!-- end plugin css for this page -->
     <!-- inject:css -->
     <link rel="stylesheet" href="../../../assets/fonts/feather-font/css/iconfont.css">
@@ -337,6 +336,38 @@
                 </ul>
             </div>
         </nav>
+        <nav class="settings-sidebar">
+            <div class="sidebar-body">
+                <a href="#" class="settings-sidebar-toggler">
+                    <i data-feather="settings"></i>
+                </a>
+                <h6 class="text-muted">Sidebar:</h6>
+                <div class="form-group border-bottom">
+                    <div class="form-check form-check-inline">
+                        <label class="form-check-label">
+              <input type="radio" class="form-check-input" name="sidebarThemeSettings" id="sidebarLight" value="sidebar-light" checked>
+              Light
+            </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <label class="form-check-label">
+              <input type="radio" class="form-check-input" name="sidebarThemeSettings" id="sidebarDark" value="sidebar-dark">
+              Dark
+            </label>
+                    </div>
+                </div>
+                <div class="theme-wrapper">
+                    <h6 class="text-muted mb-2">Light Theme:</h6>
+                    <a class="theme-item active" href="../../../demo_1/dashboard-one.html">
+                        <img src="../../../assets/images/screenshots/light.jpg" alt="light theme">
+                    </a>
+                    <h6 class="text-muted mb-2">Dark Theme:</h6>
+                    <a class="theme-item" href="../../../demo_2/dashboard-one.html">
+                        <img src="../../../assets/images/screenshots/dark.jpg" alt="light theme">
+                    </a>
+                </div>
+            </div>
+        </nav>
         <!-- partial -->
 
         <div class="page-wrapper">
@@ -347,7 +378,51 @@
                     <i data-feather="menu"></i>
                 </a>
                 <div class="navbar-content">
+                    <form class="search-form">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">
+                                    <i data-feather="search"></i>
+                                </div>
+                            </div>
+                            <input type="text" class="form-control" id="navbarForm" placeholder="Search here...">
+                        </div>
+                    </form>
                     <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="flag-icon flag-icon-us mt-1" title="us"></i> <span class="font-weight-medium ml-1 mr-1">English</span>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="languageDropdown">
+                                <a href="javascript:;" class="dropdown-item py-2"><i class="flag-icon flag-icon-us" title="us" id="us"></i> <span class="ml-1"> English </span></a>
+                                <a href="javascript:;" class="dropdown-item py-2"><i class="flag-icon flag-icon-fr" title="fr" id="fr"></i> <span class="ml-1"> French </span></a>
+                                <a href="javascript:;" class="dropdown-item py-2"><i class="flag-icon flag-icon-de" title="de" id="de"></i> <span class="ml-1"> German </span></a>
+                                <a href="javascript:;" class="dropdown-item py-2"><i class="flag-icon flag-icon-pt" title="pt" id="pt"></i> <span class="ml-1"> Portuguese </span></a>
+                                <a href="javascript:;" class="dropdown-item py-2"><i class="flag-icon flag-icon-es" title="es" id="es"></i> <span class="ml-1"> Spanish </span></a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown nav-apps">
+                            <a class="nav-link dropdown-toggle" href="#" id="appsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i data-feather="grid"></i>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="appsDropdown">
+                                <div class="dropdown-header d-flex align-items-center justify-content-between">
+                                    <p class="mb-0 font-weight-medium">Web Apps</p>
+                                    <a href="javascript:;" class="text-muted">Edit</a>
+                                </div>
+                                <div class="dropdown-body">
+                                    <div class="d-flex align-items-center apps">
+                                        <a href="../../pages/apps/chat.html"><i data-feather="message-square" class="icon-lg"></i><p>Chat</p></a>
+                                        <a href="../../pages/apps/calendar.html"><i data-feather="calendar" class="icon-lg"></i><p>Calendar</p></a>
+                                        <a href="../../pages/email/inbox.html"><i data-feather="mail" class="icon-lg"></i><p>Email</p></a>
+                                        <a href="../../pages/general/profile.html"><i data-feather="instagram" class="icon-lg"></i><p>Profile</p></a>
+                                    </div>
+                                </div>
+                                <div class="dropdown-footer d-flex align-items-center justify-content-center">
+                                    <a href="javascript:;">View all</a>
+                                </div>
+                            </div>
+                        </li>
                         <li class="nav-item dropdown nav-messages">
                             <a class="nav-link dropdown-toggle" href="#" id="messageDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i data-feather="mail"></i>
@@ -542,117 +617,41 @@
                 <nav class="page-breadcrumb">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="#">Tableau de bord</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Liste des utilisateurs</li>
+                        <li class="breadcrumb-item active" aria-current="page">Enregistrement d'une fonction</li>
                     </ol>
                 </nav>
 
+                <!-- add user form -->
                 <div class="row">
                     <div class="col-md-12 grid-margin stretch-card">
                         <div class="card">
                             <div class="card-body">
-                                <h6 class="card-title">Liste des utilisateurs</h6>
-                                <div class="table-responsive">
-                                    <table id="dataTableExample" class="table">
-                                        <thead>
-                                            <tr>
-                                                <th>Nom</th>
-                                                <th>Email</th>
-                                                <th>Fonction</th>
-                                                <th>Action</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>Tiger Nixon</td>
-                                                <td>System Architect</td>
-                                                <td>Edinburgh</td>
-                                                <td>
-                                                    <a href="add-user.html" class="btn btn-sm btn-success shadow-sm"><i class="btn-icon-prepend" data-feather="edit"></i></a>
-                                                    <a href="" class="btn btn-sm btn-info shadow-sm" data-toggle="modal" data-target=".bd-example-modal-xl"><i class="btn-icon-prepend" data-feather="clipboard"></i></a>
-                                                    <a href="#" class="btn btn-sm btn-danger shadow-sm" type="button" data-toggle="modal" data-target=".delete-user"><i class="btn-icon-prepend" data-feather="trash"></i></a>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-
-            <!-- open modal for deleting user -->
-            <div class="modal fade delete-user" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title text-center" id="exampleModalLabel">Suppression de l'utilisateur</h5>
-                        </div>
-                        <div class="modal-body container">
-                            <div class="row">
-                                <div class="col-sm-7 mx-auto">
-                                    <p>
-                                        voulez-vous supprimer ce utilisateur ?
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="row mt-3">
-                                <div class="col-sm-6 mx-auto">
-                                    <button type="button" class="btn btn-success btn-sm shadow-sm"><i class="btn-icon-prepend mr-2" data-feather="check-circle"></i> Oui</button>
-                                    <button type="button" class="btn btn-light btn-sm shadow-sm" data-dismiss="modal"><i class="btn-icon-prepend mr-2" data-feather="x-circle"></i> Non</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- end deleting -->
-            <div class="modal fade bd-example-modal-xl" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-xl">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h3 class="modal-title">Information de la fonction</h3>
-                        </div>
-                        <div class="modal-body">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-sm-10 mx-auto">
-                                        <div class="card">
-                                            <div class="card-body">
-                                                <div class="d-flex justify-content-between align-items-baseline mb-2">
-                                                    <h6 class="card-title mb-0">Information de la <span class="badge bg-dark text-white" style="font-weight: 900;">"fonction"</span></h6>
-                                                </div>
-                                                <div class="table-responsive">
-                                                    <table class="table table-hover mb-0">
-                                                        <tbody class="container">
-                                                            <tr class="row">
-                                                                <td class="col-sm-4">Email : </td>
-                                                                <td class="col-sm-8">01/01/2020</td>
-                                                            </tr>
-                                                            <tr class="row">
-                                                                <td class="col-sm-4">Fonction : </td>
-                                                                <td class="col-sm-8">01/01/2020</td>
-                                                            </tr>
-                                                            <tr class="row">
-                                                                <td class="col-sm-4">Direction departemental action social</td>
-                                                                <td class="col-sm-8">01/05/2020</td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
-                                                </div>
-                                            </div>
-                                        </div>
+                                <h6 class="card-title">Ajouter une fonction</h6>
+                                <form>
+                                    <div class="form-group">
+                                        <label for="libelle">Libelle</label>
+                                        <input type="text" class="form-control" id="libelle" placeholder="votre libelle">
                                     </div>
-                                </div>
+
+                                    <div class="form-group">
+                                        <label for="dpt">Superviseur</label>
+                                        <select class="form-control" id="dpt">
+											<option selected disabled>Selectionner un superviseur</option>
+											<option>12-18</option>
+										</select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="description">Description</label>
+                                        <textarea name="" id="" cols="30" rows="4" class="form-control" placeholder="votre description..."></textarea>
+                                    </div>
+                                    <button class="btn btn-success shadow-sm" type="submit"><i class="btn-icon-prepend mr-2" data-feather="check-circle"></i> Ajouter une fonction</button>
+                                </form>
                             </div>
                         </div>
                     </div>
                 </div>
+                <!-- end user form -->
             </div>
-
-            <!-- end modal -->
 
             <!-- partial:../../partials/_footer.html -->
             <footer class="footer d-flex flex-column flex-md-row align-items-center justify-content-between">
@@ -668,15 +667,13 @@
     <script src="../../../assets/vendors/core/core.js"></script>
     <!-- endinject -->
     <!-- plugin js for this page -->
-    <script src="../../../assets/vendors/datatables.net/jquery.dataTables.js"></script>
-    <script src="../../../assets/vendors/datatables.net-bs4/dataTables.bootstrap4.js"></script>
     <!-- end plugin js for this page -->
     <!-- inject:js -->
     <script src="../../../assets/vendors/feather-icons/feather.min.js"></script>
     <script src="../../../assets/js/template.js"></script>
     <!-- endinject -->
     <!-- custom js for this page -->
-    <script src="../../../assets/js/data-table.js"></script>
+    <script src="../../../assets/js/file-upload.js"></script>
     <!-- end custom js for this page -->
 </body>
 
